@@ -2,24 +2,30 @@
 
 is an architecture for network applications that focuses on
 
-- small, single responsibility principle conform units across all layers
-- reduce and structure dependencies between units
-- clear and complete separation of concerns
-- achieving high quality with a large number of unit tests and small number of system tests
+- small, easy to test, single responsibility principle conform units across all layers
+- reduce dependencies between units and and structure dependencies between layers
+
+to achieve clean code as a basis for hiqh quality software.
 
 ![units](https://rawgit.com/eduardbeutel/units/master/units-general-view.svg)
 
 ## Concepts
 
-An **input/output(io) interface** receives requests, transforms them, forwards them to a workflow and sends responses back. Example: SOAP, REST.
+The **domain** is a model of the business domain. Examples: entities, value objects. @see Domain Driven Design.
 
-A **workflow** is responsible for routing. It calls processors to carry out specific tasks. Workflows can also call other workflows.
+A **processor** processes its input into an output. It only performs one very specific task and contains no routing. In most cases it should have no/few dependencies. Example: Builder, Validator, Converter.
 
-A **processor** processes its input into an output. It only performs one very specific task and contains no routing. Example: Validator, Converter, Algorithm.
+A **repository** is a centralized data holder. Examples: UserRepository, EntityRepository.
 
-The **domain** is a model of the business domain. Examples: entities, aggregates, business rules.
+A **workflow** is as its name says exactly one workflow. It only does routing. Based on conditions it calls processors, repositories or other workflows.
 
-A **repository** is a centralized data holder. Examples: user repository, entity repository.
+The **API** contains endpoints that transform request/responses to domain objects and call workflows. Example: SOAP, REST.
+
+
+
+
+
+
 
 
 
