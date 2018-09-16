@@ -1,25 +1,22 @@
 # units
 
-is an architecture for network applications that focuses on
+is an architecture for (micro) services that focuses on
 
 - small, easy to test, single responsibility principle conform units across all layers
-- reduce dependencies between units and and structure dependencies between layers
+- reducing dependencies between units
+- including domain driven design
 
 to achieve clean code as a basis for hiqh quality software.
 
-![units](https://rawgit.com/eduardbeutel/units/master/units-general-view.svg)
+## Level 1: The Layers
 
-## Concepts
+![units-level1.svg](./units-level1.svg)
 
-The **domain** is a model of the business domain. Examples: entities, value objects. @see Domain Driven Design.
 
-A **processor** processes its input into an output. It only performs one very specific task and contains no routing. In most cases it should have no/few dependencies. Example: Builder, Validator, Converter.
+## Level 2: One Layer
 
-A **repository** is a centralized data holder. Examples: UserRepository, EntityRepository.
+![units-level2.svg](./units-level2.svg)
 
-A **workflow** is as its name says exactly one workflow. It only does routing. Based on conditions it calls processors, repositories or other workflows.
-
-The **API** contains endpoints that transform request/responses to domain objects and call workflows. Example: SOAP, REST.
 
 
 
