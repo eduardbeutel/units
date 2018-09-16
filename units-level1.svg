@@ -7,10 +7,10 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
+   width="148mm"
    stroke-miterlimit="10"
    font-weight="normal"
-   height="148mm"
+   height="105mm"
    font-style="normal"
    font-size="12px"
    version="1.1"
@@ -44,9 +44,9 @@
      id="namedview46"
      showgrid="false"
      units="mm"
-     inkscape:zoom="1.7458718"
-     inkscape:cx="207.54215"
-     inkscape:cy="207.7975"
+     inkscape:zoom="1.2345178"
+     inkscape:cx="207.78298"
+     inkscape:cy="189.7563"
      inkscape:window-x="54"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -56,7 +56,7 @@
      id="genericDefs" />
   <g
      id="g42"
-     transform="translate(-588.64961,-384.06496)">
+     transform="translate(-705.81496,-465.3248)">
     <defs
        id="defs1">
       <clipPath

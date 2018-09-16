@@ -8,12 +8,11 @@ is an architecture for (micro) services that focuses on
 
 to achieve clean code as a basis for hiqh quality software.
 
-## Level 1: The Layers
+## Level 1 The Layers
 
 ![units-level1.svg](./units-level1.svg)
 
-
-## Level 2: One Layer
+## Level 2 Inside A Layer
 
 ![units-level2.svg](./units-level2.svg)
 
