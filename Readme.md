@@ -12,13 +12,13 @@ to achieve clean code as a basis for hiqh quality software.
 
 ![units-level1.svg](./units-level1.svg)
 
-The Domain layer contains domain objects according to domain driven design.
-This layer is accesible to all other layers.
+- Domain contains domain objects according to domain driven design.
+- API contains protocol abstraction, serialization and versioning.
+- Repositories layer contains data providers, no matter if they query data from a database, memory, filesystem or a remote service.
+- Logic contains the rest of functionality. Some examples are: authorization, validation, converters, workflows, calculations etc.  
 
+The Domain layer is accesible to all other layers. 
 The Logic and Repositories layers can only be accessed by the layer on top of them.
-The API layer contains protocol abstraction, serialization and versioning.
-The Repositories layer contains data providers, no matter if they query data from a database, memory, filesystem or a remote service.
-The Logic layer contains the rest of functionality. Some examples are: validation, converters, workflows, calculations  etc.  
 
 ## Level 2 Inside A Layer
 
