@@ -1,6 +1,6 @@
 # units
 
-is an architecture for (micro) services that focuses on
+is an architecture for (micro)services that focuses on
 
 - small, easy to test, single responsibility principle conform units across all layers
 - reducing dependencies between units
@@ -12,22 +12,26 @@ to achieve clean code as a basis for hiqh quality software.
 
 ![units-level1.svg](./units-level1.svg)
 
-- Domain contains domain objects according to domain driven design.
-- API contains protocol abstraction, serialization and versioning.
-- Repositories layer contains data providers, no matter if they query data from a database, memory, filesystem or a remote service.
-- Logic contains the rest of functionality. Some examples are: authorization, validation, converters, workflows, calculations etc.  
+- Domain layer contains domain objects according to domain driven design.
+- API layer contains protocol abstraction, serialization and versioning.
+- Repository layer contains data providers, no matter if they query data from a database, memory, filesystem or a remote service.
+- Logic layer contains the rest of functionality. Some examples are: authorization, validation, converters, workflows, calculations etc.  
 
 The Domain layer is accesible to all other layers. 
-The Logic and Repositories layers can only be accessed by the layer on top of them.
+The Logic and Repository layers can only be accessed by the layer on top of them.
 
 ## Level 2 Inside A Layer
 
 ![units-level2.svg](./units-level2.svg)
 
-Each layer is built out of routes. 
-Routes contain the workflow of one operation and call processors that complete simple tasks.
-The goal is to keep the complexity in the route so that we can build stateless processors without (too many) dependencies which are easy to test.
-A route can be implemented as a stand alone class or as a method of a class that groups several routes.
+Each layer is built out of actions. 
+An action is a pure workflow it checks conditions and passes objects from processor to processor.
+Processors must follow the single responsibility principle. 
+The goal is to have most dependencies in the action and processors with very few/no dependencies which are easy to test and replace.
+
+Action groups can be used for code readability. 
+An action group in a common architecture is a service and the action one service method.
+
 
 
 
